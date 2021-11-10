@@ -1,0 +1,12 @@
+[19-Oct-2015 05:34:36 America/Bogota] PHP Warning:  mysql_connect() [<a href='function.mysql-connect.html'>function.mysql-connect.html</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/alexrubi/public_html/taller/valotablapc.php on line 27
+[19-Oct-2015 05:34:36 America/Bogota] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/alexrubi/public_html/taller/valotablapc.php on line 28
+[19-Oct-2015 05:34:36 America/Bogota] PHP Warning:  mysql_query() expects parameter 2 to be resource, boolean given in /home/alexrubi/public_html/taller/empresa.php on line 5
+[19-Oct-2015 05:34:36 America/Bogota] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/alexrubi/public_html/taller/empresa.php on line 6
+[19-Oct-2015 05:35:25 America/Bogota] PHP Warning:  mysql_connect() [<a href='function.mysql-connect.html'>function.mysql-connect.html</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/alexrubi/public_html/taller/valotablapc.php on line 27
+[19-Oct-2015 05:35:25 America/Bogota] PHP Warning:  mysql_select_db() expects parameter 2 to be resource, boolean given in /home/alexrubi/public_html/taller/valotablapc.php on line 28
+[19-Oct-2015 05:35:25 America/Bogota] PHP Warning:  mysql_query() expects parameter 2 to be resource, boolean given in /home/alexrubi/public_html/taller/empresa.php on line 5
+[19-Oct-2015 05:35:25 America/Bogota] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/alexrubi/public_html/taller/empresa.php on line 6
+[19-Oct-2015 05:36:16 America/Bogota] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/alexrubi/public_html/taller/empresa.php on line 6
+[19-Oct-2015 05:37:31 America/Bogota] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/alexrubi/public_html/taller/empresa.php on line 6
+[19-Oct-2015 05:38:57 America/Bogota] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/alexrubi/public_html/taller/empresa.php on line 6
+[19-Oct-2015 05:38:58 America/Bogota] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/alexrubi/public_html/taller/empresa.php on line 6
