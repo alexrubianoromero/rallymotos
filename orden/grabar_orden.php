@@ -1,10 +1,11 @@
 <?php
+
 session_start();
-/*
-echo '<pre>';
-print_r($_POST);
-echo '</pre>';
-*/
+
+// echo '<pre>';
+// print_r($_POST);
+// echo '</pre>';
+// die('llego aca');
 
 //exit();
 if ($_POST['radio']== 'undefined'){$_POST['radio'] = 0;}
@@ -40,6 +41,44 @@ values (
 //esto para evitar confucion entre un numero de orden normal y un numero de orden de venta que se crea con el numero de factura
 //echo '<br>'.$sql_grabar_orden;
 
+//////alistar informacion y enviar correo 
+//   buscar la placa  y si esta mas de una vez no se envia mensaje de bienvenida
+// si solo esta una vez osea es la primera vez, se envia mensaje de bienvenida 
+$body = '';
+
+$sql_traer_correo = "select c.email as email  from $tabla3 c 
+                     inner join $tabla4 ca on ca.propietario = c.idcliente
+					 where ca.placa = '".$_REQUEST['placa']."'  "; 
+$con_correo =  mysql_query($sql_traer_correo,$conexion);	
+$correo = mysql_fetch_assoc($con_correo);
+$_REQUEST['email'] = 	$correo['email']; 	 
+
+
+$sql_buscar_ordenes_placa = "select * from $tabla14 where placa =  '".$_REQUEST['placa']."'   ";
+$con_ordenes_Placa = mysql_query($sql_buscar_ordenes_placa,$conexion);
+$filas_ordenes_placa = mysql_num_rows($con_ordenes_Placa);
+
+if($filas_ordenes_placa  < 2)
+{
+      $body .='Te damos la bienvenida a MOTO REVOLUCIONES
+De antemano queremos agradecer tu confianza en nosotros, ';
+}
+
+
+
+$body .='
+Hemos creado una orden con la siguiente informacion. 
+Placa: '.$_POST['placa'].' Orden No : '.$_POST['orden_numero'].' 
+
+TRABAJO A REALIZAR : '.$_POST['descripcion'].'
+
+MOTO REVOLUVIONES
+Taller  
+E-mail:  motorrevolucionesaf@yahoo.com
+Direccion:  Cll 80 No 64-75';
+
+include('enviar_correo.php');
+//////////////////////
 $consulta_grabar = mysql_query($sql_grabar_orden,$conexion); 
 $sql_actualizar_contaor = "update $tabla10 set  contaor = '".$_POST['orden_numero']."'  where   id_empresa = '".$_SESSION['id_empresa']."' "; 
 $consulta = mysql_query($sql_actualizar_contaor,$conexion);

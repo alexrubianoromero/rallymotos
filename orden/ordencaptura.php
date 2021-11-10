@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('america/bogota');
 session_start();
 ?>
 <!DOCTYPE html>
