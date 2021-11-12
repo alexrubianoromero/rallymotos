@@ -34,6 +34,7 @@ $consulta_ordenes = mysql_query($sql_muestre_ordenes,$conexion);
 <?php
 echo '<table border= "1">';
 	echo '<td><h3>No FACTURA<h3></td><td><h3>PAGO/DEBE<h3></td><td><h3>TIPO FACTURA<h3></td><td><h3>ANULADO<h3></td><td><h3>Fecha</h3></td><td><h3>Placa/Identidad</h3></td><td><h3>modificar</h3></td>'; 
+	echo '<td><h3>Enviar_Correo<h3></td>';
 		while($ordenes = mysql_fetch_array($consulta_ordenes))
 			{ 
 				$identificacion = $ordenes['2'];
@@ -66,7 +67,11 @@ echo '<table border= "1">';
 			    
 
 				echo  '<td><h3>';
-				echo '<a href="factura_imprimir.php?id_factura='.$ordenes['3'].'"  target = "_blank" >Vista Impresion</a>';
+				echo '<a href="factura_imprimir.php?id_factura='.$ordenes['3'].'"  target = "_blank" >Impresion</a>';
+				echo '</h3></td>'; 
+
+				echo  '<td><h3>';
+				echo '<a href="generar_correo_items.php?id_factura='.$ordenes['3'].'" >Enviar_Correo</a>';
 				echo '</h3></td>'; 
 				echo '<tr>';
 			}

@@ -40,7 +40,6 @@ echo '<table border= "1">';
 	<td><h3>Modificar</h3></td>
 	<td><h3>Ficha Tecnica </h3></td><td><h3>Vista Impresion</h3></td>';
 	
-	
 	if($_SESSION['id_empresa'] == '16' )
 	
 	     {echo '<td><h3>Vista Impresion</h3></td>'; }
@@ -48,7 +47,7 @@ echo '<table border= "1">';
 	if($_SESSION['id_empresa'] == '40' )
 	
 	     {echo '<td><h3>Vista Impresion Honda</h3></td>'; }
-	
+		 echo '<td><h3>ENVIAR_CORREO</h3></td>>';
 	echo '<tr>';
 		while($ordenes = mysql_fetch_array($consulta_ordenes))
 			{
@@ -82,7 +81,9 @@ echo '<table border= "1">';
 					echo '<a href="orden_imprimir_eurotec.php?idorden='.$ordenes['0'].'"  target = "_blank">Imprimir_Orden</a>';
 					echo '</h3></td>'; 
 				}
-			
+				echo  '<td><h3>';
+				echo '<a href="generar_correo_items.php?idorden='.$ordenes['0'].'"  >Enviar_Correo</a>';
+				echo '</h3></td>'; 
 				echo '<tr>';
 			}
 echo '<table border= "1">';
