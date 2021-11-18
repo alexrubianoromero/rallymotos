@@ -48,6 +48,7 @@ else  { $palabra = 'MOTOS'  ;}
 		  <li><a href="inventario_codigos/index.php" class="menu">CODIGOS DE INVENTARIO</a></li>
 			<li><a href="consultas/index.php" class="menu">CONSULTAS</a></li>
 			<li><a href="consultas/vencimientos.php" class="menu">VENCIMIENTOS</a></li>
+			<li><a href="peritajes/index.php" class="menu">PERITAJES</a></li>
 			<li><a href="clave/index.php" class="menu">CAMBIO DE CLAVE</a></li>
 		
 

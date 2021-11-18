@@ -1,0 +1,14 @@
+
+#div_peritajes{
+    position:relative;
+}
+#div_botones_peritaje{
+    padding:5px;
+    margin: 10px;
+}
+.linea{
+    /* border: 1px solid black; */
+}
+.alerta1{
+    color: red;
+}
